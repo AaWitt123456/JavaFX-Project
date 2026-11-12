@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="415.0" prefWidth="512.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.awjavafxapplication.Controller.ModifyPartController">
+    <children>
+        <Label alignment="CENTER" layoutX="17.0" layoutY="15.0" prefHeight="52.0" prefWidth="123.0" text="Modify Part">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+
+        <RadioButton fx:id="modifyPartInHouse" layoutX="98.0" layoutY="86.0" mnemonicParsing="false" onAction="#addPartInHouse" selected="false" text="In-House">
+            <toggleGroup>
+                <ToggleGroup fx:id="ModifyPartToggleGroup" />
+            </toggleGroup></RadioButton>
+        <RadioButton fx:id="modifyPartOutsourced" layoutX="254.0" layoutY="86.0" mnemonicParsing="false" onAction="#addPartOutsourced" text="Outsourced" toggleGroup="$ModifyPartToggleGroup" />
+
+        <Text layoutX="22.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID" />
+        <Text layoutX="22.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
+        <Text layoutX="22.0" layoutY="206.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Stock" />
+        <Text layoutX="20.0" layoutY="241.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+        <Text layoutX="20.0" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Max" />
+        <Label fx:id="machineOrCompany" layoutX="19.0" layoutY="300.0" text="Machine ID" />
+        <Text layoutX="203.0" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Min" />
+        <TextField editable="false" fx:id="modifyPartID" layoutX="97.0" layoutY="120.0" prefHeight="25.0" prefWidth="158.0" />
+        <TextField fx:id="modifyPartName" layoutX="97.0" layoutY="156.0" prefHeight="25.0" prefWidth="158.0" />
+        <TextField fx:id="modifyPartStock" layoutX="97.0" layoutY="189.0" prefHeight="25.0" prefWidth="158.0" />
+        <TextField fx:id="modifyPartPrice" layoutX="97.0" layoutY="224.0" prefHeight="25.0" prefWidth="158.0" />
+        <TextField fx:id="modifyPartMax" layoutX="97.0" layoutY="258.0" prefHeight="25.0" prefWidth="88.0" />
+        <TextField fx:id="modifyPartMin" layoutX="246.0" layoutY="258.0" prefHeight="25.0" prefWidth="83.0" />
+        <TextField fx:id="modifyMachineID" layoutX="97.0" layoutY="296.0" prefHeight="25.0" prefWidth="158.0" />
+        <Button layoutX="177.0" layoutY="369.0" mnemonicParsing="false" onAction="#modifyPartSaveButton" prefHeight="25.0" prefWidth="52.0" text="Save" />
+        <Button layoutX="247.0" layoutY="369.0" mnemonicParsing="false" onAction="#modifyPartCancelButton" prefHeight="25.0" prefWidth="61.0" text="Cancel" />
+    </children>
+</AnchorPane>
